@@ -1,0 +1,162 @@
+[
+  {
+    "test_id": 1,
+    "text": "{\"order_number\": \"00048\"}",
+    "in_tokens": 154,
+    "out_tokens": 12,
+    "stop_reason": "STOP",
+    "seconds": 3.48,
+    "cost_usd": 7.62e-05,
+    "provider": "google",
+    "model": "gemini-3.5-flash-lite",
+    "parsed": true,
+    "answer": {
+      "order_number": "00048"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 2,
+    "text": "{\"order_number\": \"6032\"}",
+    "in_tokens": 156,
+    "out_tokens": 11,
+    "stop_reason": "STOP",
+    "seconds": 4.97,
+    "cost_usd": 7.43e-05,
+    "provider": "google",
+    "model": "gemini-3.5-flash-lite",
+    "parsed": true,
+    "answer": {
+      "order_number": "6032"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 3,
+    "text": "{\"order_number\": null}",
+    "in_tokens": 160,
+    "out_tokens": 7,
+    "stop_reason": "STOP",
+    "seconds": 5.97,
+    "cost_usd": 6.55e-05,
+    "provider": "google",
+    "model": "gemini-3.5-flash-lite",
+    "parsed": true,
+    "answer": {
+      "order_number": null
+    },
+    "correct": true
+  },
+  {
+    "test_id": 4,
+    "text": "{\"order_number\": \"219\"}",
+    "in_tokens": 158,
+    "out_tokens": 10,
+    "stop_reason": "STOP",
+    "seconds": 4.28,
+    "cost_usd": 7.24e-05,
+    "provider": "google",
+    "model": "gemini-3.5-flash-lite",
+    "parsed": true,
+    "answer": {
+      "order_number": "219"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 5,
+    "text": "{\"order_number\": \"5087\"}",
+    "in_tokens": 156,
+    "out_tokens": 11,
+    "stop_reason": "STOP",
+    "seconds": 1.95,
+    "cost_usd": 7.43e-05,
+    "provider": "google",
+    "model": "gemini-3.5-flash-lite",
+    "parsed": true,
+    "answer": {
+      "order_number": "5087"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 1,
+    "text": "{\"order_number\":\"00048\"}",
+    "in_tokens": 160,
+    "out_tokens": 7,
+    "stop_reason": "stop",
+    "seconds": 1.23,
+    "cost_usd": 7.52e-05,
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "parsed": true,
+    "answer": {
+      "order_number": "00048"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 2,
+    "text": "{\"order_number\":\"6032\"}",
+    "in_tokens": 161,
+    "out_tokens": 7,
+    "stop_reason": "stop",
+    "seconds": 1.07,
+    "cost_usd": 7.56e-05,
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "parsed": true,
+    "answer": {
+      "order_number": "6032"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 3,
+    "text": "{\"order_number\": null}",
+    "in_tokens": 168,
+    "out_tokens": 6,
+    "stop_reason": "stop",
+    "seconds": 0.71,
+    "cost_usd": 7.68e-05,
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "parsed": true,
+    "answer": {
+      "order_number": null
+    },
+    "correct": true
+  },
+  {
+    "test_id": 4,
+    "text": "{\"order_number\":\"219\"}",
+    "in_tokens": 166,
+    "out_tokens": 6,
+    "stop_reason": "stop",
+    "seconds": 0.79,
+    "cost_usd": 7.6e-05,
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "parsed": true,
+    "answer": {
+      "order_number": "219"
+    },
+    "correct": true
+  },
+  {
+    "test_id": 5,
+    "text": "{\"order_number\":\"5087\"}",
+    "in_tokens": 165,
+    "out_tokens": 7,
+    "stop_reason": "stop",
+    "seconds": 0.69,
+    "cost_usd": 7.72e-05,
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "parsed": true,
+    "answer": {
+      "order_number": "5087"
+    },
+    "correct": true
+  }
+]
