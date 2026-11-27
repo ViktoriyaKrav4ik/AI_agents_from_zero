@@ -68,13 +68,25 @@ HTTP_TIMEOUT = 60         # секунд на один HTTP-запит
 # ---------------------------------------------------------------- .env
 
 def load_env(path: str = ".env") -> None:
-    """Читає .env поруч зі скриптом і кладе значення в os.environ.
+    """Шукає .env у папці скрипта, потім вище — до кореня репозиторію
+    (папки з .git), і кладе значення в os.environ. Так один .env у корені
+    служить усім домашкам (HW2/, HW3/, ...).
 
     Значення з .env перекривають уже встановлені змінні, щоб після зміни
     файлу не лишився старий ключ із середовища.
     """
-    full = os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
-    if not os.path.exists(full):
+    folder = os.path.dirname(os.path.abspath(__file__))
+    full = None
+    while True:
+        candidate = os.path.join(folder, path)
+        if os.path.exists(candidate):
+            full = candidate
+            break
+        parent = os.path.dirname(folder)
+        if os.path.isdir(os.path.join(folder, ".git")) or parent == folder:
+            break       # дійшли до кореня репозиторію або диска — далі не шукаємо
+        folder = parent
+    if full is None:
         return
     with open(full, encoding="utf-8") as f:
         for line in f:
